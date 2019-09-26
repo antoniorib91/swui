@@ -1,0 +1,35 @@
+// @import '~/assets/scss/variables.scss';
+
+.logo {
+  font-family: 'starlogo';
+  display: block;
+  margin: 0.5rem 0.5rem 0rem 1.0rem
+}
+
+.sub-logo {
+  font-family: 'starlogo';
+  margin: auto;
+  width: 50%;
+  display: block;
+  padding-left: 30px;
+}
+
+.logo-mini {
+  font-family: 'starlogo';
+  display: none;
+}
+
+
+@media (max-width: 749px) {
+  .logo-mini {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+// @media (min-width: 750px) {
+
+// }

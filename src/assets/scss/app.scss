@@ -1,0 +1,10 @@
+@import './variables';
+@import './fonts';
+
+.custom-background {
+  font-family: $font-base;
+  background-color: $body-background;
+  background-image: url("./assets/images/stars.png");
+  color: $white;
+  height: calc(100vh);
+}
