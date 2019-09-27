@@ -1,0 +1,32 @@
+@import '../../../../../../assets/scss/variables';
+
+.button-roll {
+  border: none;
+  height: 350px;
+  width: 45px;
+  position: absolute;
+  top: 130px;
+  background: $gray-light;
+  z-index: 99;
+  color: $black;
+  opacity: 0.01;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &.left {
+    left: 20px
+  }
+
+  &.right {
+    right: 20px;
+  }
+}
+
+@media (max-width: 749px) {
+  .button-roll {
+    display: none;
+  }
+}
+

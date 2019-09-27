@@ -3,7 +3,8 @@
 .logo {
   font-family: 'starlogo';
   display: block;
-  margin: 0.5rem 0.5rem 0rem 1.0rem
+  margin: 0.5rem 0.5rem 0rem 1.0rem;
+  cursor: pointer;
 }
 
 .sub-logo {
@@ -12,20 +13,29 @@
   width: 50%;
   display: block;
   padding-left: 30px;
+  cursor: pointer;
 }
 
 .logo-mini {
   font-family: 'starlogo';
   display: none;
+  cursor: pointer;
 }
 
 
 @media (max-width: 749px) {
   .logo-mini {
-    display: block;
+    // display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .logo {
+    display: none;
+  }
+
+  .sub-logo {
     display: none;
   }
 }

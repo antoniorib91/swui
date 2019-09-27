@@ -1,1 +1,15 @@
-<p>movie-list works!</p>
+<div class="row">
+  <div class="col-12">
+    <div class="movie-list" #movieDivList>
+      <app-button-roll [elementToScroll]="movieDiv" buttonSide="left"
+      *ngIf="movieList.length > 4"></app-button-roll>
+      <app-button-roll [elementToScroll]="movieDiv" buttonSide="right"
+      *ngIf="movieList.length > 4"></app-button-roll>
+      <div class="row no-gutters">
+        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 with-margin" *ngFor="let mov of movieList; let i = index" >
+          <app-movie-card [movie]="mov" [id]="(i)" (hover)="handleMouseOver($event)"></app-movie-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

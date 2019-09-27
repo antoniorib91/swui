@@ -1,1 +1,45 @@
-<p>movie-detail works!</p>
+<div class="row fill">
+  <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+    <div class="row" *ngIf="movie" >
+      <div class="col-md-4 col-lg-4 col-sm-4 col-12 ">
+       <div class="row">
+         <div class="col-12">
+            <div class="info1">
+              <img [src]="imagePath" class="image mx-auto">
+            </div>
+         </div>
+       </div>
+       <div class="row">
+        <div class="col-12">
+          <h5 class="title">About:</h5>
+          <p class="opening_crawl">
+            Director: {{movie.director}} <br>
+            Producer: {{movie.producer}} <br>
+            Total Planets: {{movie.planets.length}}
+          </p>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-8 col-lg-8 col-sm-8 col-12">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+            <h5 class="title">{{movie.title}}</h5>
+            <p class="opening_crawl">
+              {{ movie.opening_crawl }}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+              <h5 class="title">Trailer</h5>
+              <iframe frameborder="0"
+                [src]="youtubeUrl | safeURL" class="iframe"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

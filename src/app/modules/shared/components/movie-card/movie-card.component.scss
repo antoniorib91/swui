@@ -1,0 +1,73 @@
+@import '../../../../../assets/scss/variables.scss';
+.card {
+  &.movie {
+    margin: 1px;
+    border: none;
+    cursor: pointer;
+
+    img {
+      height: 325px;
+      width: 270px;
+    }
+
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+      z-index: 1;
+    }
+  }
+
+  .card-body {
+    &.movie {
+      padding: 0px;
+    }
+
+    .button-show {
+      display: none;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+      min-width: 130px;
+      position: absolute;
+      width: 75%;
+      height: 40px;
+      left: 50px;
+      border-radius: 5px;
+      bottom: 70px;
+      opacity: 0.5;
+
+      &:hover {
+        background-color: $gray-light;
+      }
+    }
+
+    &:hover {
+      .button-show {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media (max-width: 749px) {
+  .card {
+    &.movie {
+      margin: 0px;
+      box-shadow: none;
+      outline: none;
+      img {
+        height: 430px;
+        width: 385px;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .card {
+    &.movie {
+      img {
+        height: 325px;
+        width: 270px;
+      }
+    }
+  }
+}
